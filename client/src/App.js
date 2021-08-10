@@ -17,6 +17,7 @@ import {
   Link,
   useHistory
 } from "react-router-dom";
+import './tape.css'
 
 var Gear = {
 
@@ -516,7 +517,6 @@ var _randomiseScene = function(transition) {
   });
 };
 
-
 function App() {
   const history = useHistory();
 
@@ -529,7 +529,51 @@ function App() {
       <div className="title">
         <h1>eth(OS)step</h1>
       </div>
-      <div className="container gears-d3-canvas"></div>
+      <div className="container gears-d3-canvas">
+          
+      </div>
+      <br/>
+      <div class="container-tape">
+          <div class="rotator">
+              <div class="face">
+                <div class="screws">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="shadow"></div>
+                <div class="label">
+                  <div class="inner">
+                    <div class="lines">
+                      <i></i><i></i><i></i>
+                    </div>
+                    <div class="stripes">
+                      <i></i><i></i>
+                    </div>
+                    <div class="cutout">
+                      <div class="wheel">
+                        <i></i><i></i><i></i><i></i><i></i><i></i>
+                      </div>
+                      <div class="wheel">
+                        <i></i><i></i><i></i><i></i><i></i><i></i>
+                      </div>
+                      <div class="window">
+                        <div class="spool-left"></div>
+                        <div class="spool-right"></div>
+                        <div class="reel-left"></div>
+                        <div class="reel-right"></div>
+                      </div>
+                      <div class="ticks"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br/>
+        <div>
+            Creating lockstep torque rhythms for global tree & mind repair, as we rewind our tape on healing.
+        </div>
+      <br/>
+
       <button className="button-begin" onClick={() => history.push('/gather')}>begin</button>
     </div>
   );

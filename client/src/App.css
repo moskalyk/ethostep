@@ -51,11 +51,11 @@ body {
 }
 
 .title {
-  margin: 100px;
+  margin: 60px;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
