@@ -15,7 +15,11 @@ Specific use cases I might be looking at are:
 * At Home :: gestures or exercises, possibly even tie in elderly community as sometimes physical activity can be difficult, so movement of hands in hastas or other symbolic gesture execution might yield productive and connected hearts and minds
 * Local park festivals or meetups :: With heads up displays, Augmented reality or Light Emitting Diodes with color coordination via blueberry light can be mapped, with the same procedure of cycling signs, even conducting in unison around specific culturally significant public trees, whereby future uses become embedded in the data produce, like coptic or feinance etching in artist peices seen through in anthropological history in other items
 
-Placing new significant terms on the word Ritual Reality
+Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracke objects of sacred.
+
+![hands on_01](hands_on_01.jpeg) | ![hands on_02](yourimg2.jpg)
+
+Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02]()
 
 ## architecture (coming soon)
  todo
@@ -50,7 +54,12 @@ synchrony
 // develop trust modules from like spectrographs
 
 ## research sourcing
-In line with goals of increasing the intelligence, health, & lockstep of community coordination, either a shuffle or weighting based system can be implemented to alter the standard gather capacity and orientation. The hope is that greater spectrum coherence can be found in those finding coherent chimera states in frequency levels and group coordination, which down the line may be useful in certain ecological psychology based appreciation of finding alchemical totems or essences to build underlying value affinity structure upon, alongside any financial or environmental gain that might be achived while under ritual participation.
+
+The philosophy this expands on might involve strucralism as a delivery method for combinatorial syncretic cultural influences across networks of peers via various stimulus discriminations. The construction of cyclically driven structures from underlying human phenomena that can be translated and retuned based on declarative topologicaly restructuring. The means by a given tree structures in populations additional rebalancing instrumentality via toolset into more complex and fluid domains of identity memetic potentialities on genetic trees.
+
+!['trees'](./tree_iterations.png)
+
+In line with goals of increasing the intelligence, health, & lockstep of community coordination, either a shuffle or weighting based system can be implemented to alter the standard gather capacity and orientation. The hope is that greater spectrum coherence can be found in those finding coherent chimera states in frequency levels and group coordination, which down the line may be useful in certain ecological psychology based appreciation of finding alchemical totems or essences to build underlying value affinity structure upon, alongside any financial or environmental gain that might be archived / achieved while under ritual participation.
 
 [MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing](https://arxiv.org/abs/1905.00067)
 
