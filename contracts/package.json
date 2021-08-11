@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.10",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.2.0",
-    "dotenv": "^10.0.0"
+    "@openzeppelin/test-helpers": "^0.5.12",
+    "@superfluid-finance/ethereum-contracts": "^1.0.0-rc.6",
+    "dotenv": "^10.0.0",
+    "hardhat-deploy": "^0.8.11"
   }
 }
