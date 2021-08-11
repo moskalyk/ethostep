@@ -9,6 +9,14 @@ unity-as-a-construction, synchrony-as-the-way.
 
 Consider it a type of movement gather zones, that are emitting spiritual energy from frequencies captured. At a central node aggregated the view of said nodes, in some mel-spectrograph. Frequencies can have NFT’s minted as time shots, like onto L2 like polygon. Groups can have unique signatures in aggregate that are published as NFTs, and redeemed by institutions or health authorities that can use said data for bio ip patents, and buybacks on tree counts become constructed based on a data flow volumetric amount. Internet folk gathers can create a type of Reynolds number for the fluidity of sequenced gesture captures, alternating a new type of energy called torques. Auction house deals create Free data storage using the self-hosted bibot. Then participation up to a certain point that gets paid to buyback tree sappling credits benefitted from current filecoin negative pricing.
 
+## f(a||)urther exploration
+
+Specific use cases I might be looking at are: 
+* At Home :: gestures or exercises, possibly even tie in elderly community as sometimes physical activity can be difficult, so movement of hands in hastas or other symbolic gesture execution might yield productive and connected hearts and minds
+* Local park festivals or meetups :: With heads up displays, Augmented reality or Light Emitting Diodes with color coordination via blueberry light can be mapped, with the same procedure of cycling signs, even conducting in unison around specific culturally significant public trees, whereby future uses become embedded in the data produce, like coptic or feinance etching in artist peices seen through in anthropological history in other items
+
+Placing new significant terms on the word Ritual Reality
+
 ## architecture (coming soon)
  todo
 
