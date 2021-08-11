@@ -16,7 +16,11 @@ unity-as-a-construction, synchrony-as-the-way, [tune](https://www.youtube.com/wa
 
 ## description
 
-Consider it a type of movement gather zones, that are emitting spiritual energy from frequencies captured. At a central node aggregated the view of said nodes, with some mel-spectrograph. Frequencies can have NFT’s minted as time shots, like onto L2 like polygon. Groups can have unique signatures in aggregate that are published as NFTs, and redeemed by institutions or health authorities that can use said data for bio ip patents, and buybacks on tree counts become constructed based on a data flow volumetric amount. Internet folk gathers can create a type of Reynolds number for the fluidity of sequenced gesture captures, alternating a new type of energy called torques. Auction house deals create Free data storage using the self-hosted bidbot. Then with participation up to a certain point of daata flow, participants gets paid via divident to buyback tree sappling credits benefitted from current filecoin negative pricing.
+Consider it a type of movement gather zones, that are emitting spiritual energy from frequencies captured. At a central node aggregated and minted on Polygon the view of said nodes, with some [mel-spectrogram](https://towardsdatascience.com/getting-to-know-the-mel-spectrogram-31bca3e2d9d0) or alternative 3d representation (see below). 
+
+!['mel-spectrogram'](./mel.png)
+
+Frequencies can have NFT’s minted as time shots, like onto L2 like polygon. Groups can have unique signatures in aggregate that are published as NFTs, and redeemed by institutions or health authorities that can use said data for bio ip patents, and buybacks on tree counts become constructed based on a data flow volumetric amount. Internet folk gathers can create a type of Reynolds number for the fluidity of sequenced gesture captures, alternating a new type of energy called torques. Auction house deals create Free data storage using the self-hosted bidbot. Then with participation up to a certain point of daata flow, participants gets paid via divident to buyback tree sappling credits benefitted from current filecoin negative pricing.
 
 ## f(a||)urther exploration
 
