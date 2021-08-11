@@ -1,4 +1,4 @@
-# ethostep
+# eth(OS)tep
 ### Hackfs build concept ፊደል
 
 Ethostep is a techno-spiritual collective hastas movement to decentralized audio built to accommodate contiguous cognitive biofeedback aggregation for finding community lockstep rhythm generations for our potentialities of unity seeking in new modes of Vibrational Capitalism
