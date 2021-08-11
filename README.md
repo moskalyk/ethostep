@@ -27,8 +27,8 @@ Specific use cases I might be looking at are:
 Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracke objects of sacred.
 
 <p float="left">
-  <img src="/hands_on_01.jpeg" width="150" />
-  <img src="/hands_on_02.jpeg" width="150" /> 
+  <img src="/hands_on_01.jpeg" width="500" />
+  <img src="/hands_on_02.jpeg" width="500" /> 
 </p>
 
 Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546068180687126529)
