@@ -17,9 +17,9 @@ Specific use cases I might be looking at are:
 
 Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracke objects of sacred.
 
-![hands on_01](hands_on_01.jpeg) | ![hands on_02](yourimg2.jpg)
+![hands on_01](hands_on_01.jpeg) | ![hands on_02](hands_on_02.jepg)
 
-Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02]()
+Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546068180687126529)
 
 ## architecture (coming soon)
  todo
