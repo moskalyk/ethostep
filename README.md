@@ -1,0 +1,50 @@
+# ethostep
+### Hackfs build concept ፊደል
+
+Ethostep is a techno-spiritual collective hastas movement to decentralized audio built to accommodate contiguous cognitive biofeedback aggregation for finding community lockstep rhythm generations for our potentialities of unity seeking in new modes of Vibrational Capitalism
+
+unity-as-a-construction, synchrony-as-the-way. 
+
+## description
+
+Consider it a type of movement gather zones, that are emitting spiritual energy from frequencies captured. At a central node aggregated the view of said nodes, in some mel-spectrograph. Frequencies can have NFT’s minted as time shots, like onto L2 like polygon. Groups can have unique signatures in aggregate that are published as NFTs, and redeemed by institutions or health authorities that can use said data for bio ip patents, and buybacks on tree counts become constructed based on a data flow volumetric amount. Internet folk gathers can create a type of Reynolds number for the fluidity of sequenced gesture captures, alternating a new type of energy called torques. Auction house deals create Free data storage using the self-hosted bibot. Then participation up to a certain point that gets paid to buyback tree sappling credits benefitted from current filecoin negative pricing.
+
+## architecture (coming soon)
+ todo
+
+## sub-flow-architecture
+
+!['architecture'](./arch_flow.png)
+
+gather zones / data coops / shuffle mixhop on trust graph
+torques
+synchrony
+
+## questions & investigates
+* every so often a peer connects to another host for a gather based on some weighting calculated at the node
+* storage of ethereum addresses in the browser to map to peerids from fluence, to superfluid streams dividend rights token for Initial distribution agreements participants
+* perfrom benchmarks and live counter of data capture via flow Mb/s to map to auction house bidbot and intern $0.10 tree.
+
+*token for thought: ethereum gas fees be a function of trees planted, more use of 4 hour increment rhythms, more cognition trials, devotion to longer optimism rolled up life cyles, health clock synchrony, tree repair on carbon sequestration, joy exuding activities to powerful sound baths & music orchestration*
+
+## general programming TODOs
+// get blueberry data window
+// send to aqua script to call
+// send particle to marine vm
+// in marine vm, compute multiple particle sources together 
+//     Re: data & 
+//     external frequency source as hz calculation
+//     add in layer of point pixel mapping as an accuracy to shape
+// every time step x windows, perform a shuffle from the kademlia service, 
+// get neighbours and seed random with timestep built-in function
+// before every shuffle, perform a snapshot and deploy NFT on polygon
+// get all nodes and computer spectrograph overlayed on camera gathers to collate similiarities
+// develop trust modules from like spectrographs
+
+## research sourcing
+In line with goals of increasing the intelligence, health, & lockstep of community coordination, either a shuffle or weighting based system can be implemented to alter the standard gather capacity and orientation. The hope is that greater spectrum coherence can be found in those finding coherent chimera states in frequency levels and group coordination, which down the line may be useful in certain ecological psychology based appreciation of finding alchemical totems or essences to build underlying value affinity structure upon, alongside any financial or environmental gain that might be achived while under ritual participation.
+
+[MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing](https://arxiv.org/abs/1905.00067)
+
+todo: reach out to SENS Foundation for participation in research aggregation idea and approach for longevity
+
