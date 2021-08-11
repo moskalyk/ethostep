@@ -36,7 +36,7 @@ Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c24842
 As Tesla looked at wireless charging and electrical capacitors from envrionment & people. Transmitting through the natural medium, the software might be used for conducing an instrumentality of objects, people, gestures, & trees. Pump the planet with audio signals, to generate resource and token distribution from delegated interest at its core. At a theoretical level, think of it as conducting group attention in the format of information of atmospheric charge from group participation. Much to the tune of ‘bring your own algorithm’ the project aims to say, bring your own vibe to the court of ritual gathers, where fluence particles get flung into a network and picked up with spectral computing [interactive NFTs](https://github.com/BeyondNFT/sandbox#beyondnft---interactive-nft-sandbox). 
 
 Alternative inspiration from considering spectral gather distributions in patchwork DAO governance models across geographies. [source](https://twitter.com/mitchellfchan/status/1423484420804198403)
-!['trees'](./sensing.jpeg)(./sensing.jpeg)
+!['trees'](./sensing.jpeg)
 
 Representing complex dynamics where pockets of [negative entropy](https://www.negativeentropy.app/about) in chaotic attractors are found in the breath we take together in structure preserving hastas steps when scaling Dunbars number via mass coordination games, or, culture propagation, thought of as swarming movements. NFTs produced might cover group configurations generated via streaming payments to fractionalized owners to create and produce emissions of synthrony and regeneration when performing torque set, inspiration from this pject on respresentation.
 
