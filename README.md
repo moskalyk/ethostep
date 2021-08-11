@@ -26,7 +26,10 @@ Specific use cases I might be looking at are:
 
 Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracke objects of sacred.
 
-![hands on_01](hands_on_01.jpeg) | ![hands on_02](hands_on_02.jpeg)
+<p float="left">
+  <img src="/hands_on_01.jpeg" width="150" />
+  <img src="/hands_on_02.jpeg" width="150" /> 
+</p>
 
 Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546068180687126529)
 
@@ -68,7 +71,7 @@ synchrony
 
 The philosophy this expands on might involve strucralism as a delivery method for combinatorial syncretic cultural influences across networks of peers via various stimulus discriminations. The construction of cyclically driven structures from underlying human phenomena that can be translated and retuned based on declarative topologicaly restructuring. The means by a given tree structures in populations additional rebalancing instrumentality via toolset into more complex and fluid domains of identity memetic potentialities on genetic trees.
 
-!['trees'](./tree_iterations.png)
+!['trees'](./tree_iterations.jpeg)
 
 In line with goals of increasing the intelligence, health, & lockstep of community coordination, either a shuffle or weighting based system can be implemented to alter the standard gather capacity and orientation. The hope is that greater spectrum coherence can be found in those finding coherent chimera states in frequency levels and group coordination, which down the line may be useful in certain ecological psychology based appreciation of finding alchemical totems or essences to build underlying value affinity structure upon, alongside any financial or environmental gain that might be archived / achieved while under ritual participation.
 
