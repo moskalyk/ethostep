@@ -24,7 +24,7 @@ Specific use cases I might be looking at are:
 * At Home :: gestures or exercises, possibly even tie in elderly community as sometimes physical activity can be difficult, so movement of hands in hastas or other symbolic gesture execution might yield productive and connected hearts and minds
 * Local park festivals or meetups :: With heads up displays, Augmented reality or Light Emitting Diodes with color coordination via blueberry light can be mapped, with the same procedure of cycling signs, even conducting in unison around specific culturally significant public trees, whereby future uses become embedded in the data produce, like coptic or feinance etching in artist peices seen through in anthropological history in other items
 
-Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracke objects of sacred.
+Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracked objects or movements of sacred.
 
 <p float="left">
   <img src="/hands_on_01.jpeg" width="400" />
@@ -33,7 +33,12 @@ Placing new significant terms on the word **_Ritual Reality_**, where Phygital (
 
 Credit: [Hands On_01](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546067081175498753), [Hands On_02](https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/79340923287578515051916988354893483198355781900529306783424546068180687126529)
 
-As Tesla looked at wireless charging and electrical capacitors as people. Transmitting through the natural medium, the software might be used for conducing an instrumentality of objects and gestures. Pump the planet with audio signals, to generate resource and token distribution from donations at its core. At a theoretical level, think of it as conducting group attention in the format of information of atmospheric charge from group participation. Much to the tune of ‘bring your own algorithm’ the project aims to say, bring your own vibe to the court of ritual gathers. 
+As Tesla looked at wireless charging and electrical capacitors from envrionment & people. Transmitting through the natural medium, the software might be used for conducing an instrumentality of objects, people, gestures, & trees. Pump the planet with audio signals, to generate resource and token distribution from delegated interest at its core. At a theoretical level, think of it as conducting group attention in the format of information of atmospheric charge from group participation. Much to the tune of ‘bring your own algorithm’ the project aims to say, bring your own vibe to the court of ritual gathers, where fluence particles get flung into a network and picked up with spectral computing [interactive NFTs](https://github.com/BeyondNFT/sandbox#beyondnft---interactive-nft-sandbox). 
+
+Alternative inspiration from considering spectral gather distributions in patchwork DAO governance models across geographies. !['source'](https://twitter.com/mitchellfchan/status/1423484420804198403)
+!['trees'](./tree_iterations.jpeg)(./sensing.jpeg)
+
+Representing complex dynamics where pockets of [negative entropy](https://www.negativeentropy.app/about) in chaotic attractors are found in the breath we take together in structure preserving hastas steps when scaling Dunbars number via mass coordination games, or, culture propagation, thought of as swarming movements. NFTs produced might cover group configurations generated via streaming payments to fractionalized owners to create and produce emissions of synthrony and regeneration when performing torque set, inspiration from this pject on respresentation.
 
 ## architecture (coming soon)
  todo
