@@ -56,7 +56,7 @@ torques
 synchrony
 
 ## questions & investigates
-* every so often a peer connects to another host for a gather based on some weighting calculated at the node
+* every so often a peer connects to another host for a gather based on some weighting calculated at the node, could use this as a [visible video predictor](https://github.com/gfxdisp/FovVideoVDP)
 * storage of ethereum addresses in the browser to map to peerids from fluence, to superfluid streams dividend rights token for Initial distribution agreements participants
 * perfrom benchmarks and live counter of data capture via flow Mb/s to map to auction house bidbot and intern $0.10 tree with [Eden Reforestation Project](https://edenprojects.org/).
 
