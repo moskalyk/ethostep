@@ -5,6 +5,9 @@ Ethostep is a techno-spiritual collective hastas movement to decentralized audio
 
 unity-as-a-construction, synchrony-as-the-way, [tune](https://www.youtube.com/watch?v=Rm9hfl9WB9I).
 
+## minimal design
+!['demo'](./screen_gif.gif)
+
 ## technolgy stack uses
 * Filecoin Auctions (bidbot)
 * xbox one kinect
