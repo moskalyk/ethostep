@@ -6,6 +6,7 @@ import '@audius/stems/dist/avenir.css'
 
 import Graph from "react-graph-vis";
 import abi from './abis/Dividend_Rights_Token.js'
+import Counter from './Counter/Counter.js'
 
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
@@ -125,6 +126,7 @@ function Gather() {
 
     const DEFAULT_INDEX_ID = "42";
 
+    const pool = await user.createPool({ poolId: 5 });
 
     const tx = await web3tx(
             sf.host.callAgreement,
@@ -132,7 +134,7 @@ function Gather() {
         )(
             sf.agreements.ida.address,
             sf.agreements.ida.contract.methods
-                .approveSubscription(daiXToken, "0xE0722C10955d263D1bA434BaB1bce1E98A925Fc4", "3918", "0x")
+                .approveSubscription(daiXToken, "0xE0722C10955d263D1bA434BaB1bce1E98A925Fc4", 5, "0x")
                 .encodeABI(),
             "0x", // user data
         );
@@ -140,7 +142,6 @@ function Gather() {
 
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
     // create pool
-    const pool = await user.createPool({ poolId: 3 });
     console.log(pool)
 
     // count users connected
@@ -160,12 +161,13 @@ function Gather() {
     <div className="App">
 
       <div className="title">
-        <h1>gather</h1>
+        <h1 className="title">gather</h1>
         </div>
         {/*<Button text='Hello World!' />*/}
       <button className="button-begin" onClick={gather}>gather</button>
       <button className="button-begin" onClick={start}>start</button>
       <button className="button-begin" onClick={end}>stop</button>
+      <Counter/>
   	</div>
   );
 }

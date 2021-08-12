@@ -526,11 +526,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">
-        <h1>eth(OS)step</h1>
-      </div>
+      <br/>
+      <br/>
       <div className="container gears-d3-canvas">
           
+      </div>
+      <div >
+        <h1 className="title">eth(OS)step</h1>
       </div>
       <br/>
       <div class="container-tape">
@@ -569,8 +571,10 @@ function App() {
           </div>
         </div>
         <br/>
-        <div>
-            Creating lockstep torque rhythms for global tree & mind repair, as we rewind our tape on healing.
+        <div className="title">
+            Creating lockstep torque rhythms for global tree & mind repair, 
+            <br/>
+            as we rewind our tape on healing.
         </div>
       <br/>
 

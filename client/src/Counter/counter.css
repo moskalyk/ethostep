@@ -1,0 +1,45 @@
+#root{
+  margin: auto auto;
+  margin-top: 2%;
+  border: 2px dashed black;
+  width: 30%;
+  font-family: 'Major Mono Display', monospace !important;
+
+}
+
+button {
+  margin-right: 4%;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 1px;
+  font-family: 'Major Mono Display', monospace !important;
+
+}
+
+h2 {
+  font-family: 'Major Mono Display', monospace !important;
+}
+
+button:active {
+  box-shadow: 5px 1px #666;
+  transform: translateX(2px);
+}
+
+.counters {
+  display:flex; 
+  flex-direction:row;
+  margin-left: 130px;
+  /*margin-left: 250px;*/
+}
+
+#inc {
+  background-color: #00ff00;
+}
+
+#dec {
+  background-color: #ff0000;
+}
+
+#reset {
+  background-color: #0066ff;
+}
