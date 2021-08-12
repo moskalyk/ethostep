@@ -8,8 +8,8 @@ unity-as-a-construction, synchrony-as-the-way, [tune](https://www.youtube.com/wa
 ## minimal design
 !['demo'](./screen_gif.gif)
 
-## technolgy stack uses
-* Filecoin Auctions (bidbot)
+## technology stack
+* Filecoin-polygon bridge auctions
 * xbox one kinect
 * Blueberry SDK (BCI)
 * Fluence Data Networking (p2p)
