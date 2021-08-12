@@ -8,6 +8,8 @@ import Graph from "react-graph-vis";
 import abi from './abis/Dividend_Rights_Token.js'
 import Counter from './Counter/Counter.js'
 
+import Web3 from 'web3';
+
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
 const { web3tx } = require("@decentral.ee/web3-helpers");
@@ -15,6 +17,7 @@ const { web3tx } = require("@decentral.ee/web3-helpers");
 // import "./network.css";
 
 let sf;
+let web3;
 const daiXToken = '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00'
 function Gather() {
   const [accountWallet, setAccountWallet] = useState('')
@@ -60,6 +63,9 @@ function Gather() {
 
   const setAccount = async () => {
     console.log('howdy')
+
+    web3 = new Web3(window.ethereum)
+
     sf = new SuperfluidSDK.Framework({
         ethers: new Web3Provider(window.ethereum)
     });
@@ -90,7 +96,7 @@ function Gather() {
     console.log(details);
 
     const outFlow = sf.user({
-        address: "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        address: walletAddress[0],
         token: daiXToken
     });
     
@@ -103,7 +109,7 @@ function Gather() {
   const end = () => {
     console.log('end')
      user.flow({
-      recipient: "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      recipient: accountWallet,
       flowRate: '0' // 2592 DAIx per month
     });
   }
@@ -119,29 +125,12 @@ function Gather() {
   const gather = async () => {
     console.log('start')
 
-    // const apTx = await sf.agreements.ida.contract.methods
-    //             .approveSubscription(daiXToken, "0xE0722C10955d263D1bA434BaB1bce1E98A925Fc4", 0, "0x")
-    //             .encodeABI()
-    // console.log(apTx)
-
-    const DEFAULT_INDEX_ID = "42";
-
-    const pool = await user.createPool({ poolId: 5 });
-
-    const tx = await web3tx(
-            sf.host.callAgreement,
-            "OUT approves subscription to the app"
-        )(
-            sf.agreements.ida.address,
-            sf.agreements.ida.contract.methods
-                .approveSubscription(daiXToken, "0xE0722C10955d263D1bA434BaB1bce1E98A925Fc4", 5, "0x")
-                .encodeABI(),
-            "0x", // user data
-        );
-    console.log(tx)
-
+    // starting pool configs
+    const DEFAULT_POOL_INDEX_ID = 15;
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
+
     // create pool
+    const pool = await user.createPool({ poolId: DEFAULT_POOL_INDEX_ID });
     console.log(pool)
 
     // count users connected
@@ -150,11 +139,59 @@ function Gather() {
     // divide by user account
     const shareSplit = 1/usersLength * 100
 
-    // split tokens to users
+    // split tokens to users, approve subscriptions
     for (var i = 0; i> usersLength; i++){
       let shares = await user.giveShares({ poolId: 1, recipient: users[i], shares: shareSplit });
       console.log(shares)
+
+
+
+    let call = [
+              [
+                  201, // approve the ticket fee
+                  sf.agreements.ida.address,
+                  web3.eth.abi.encodeParameters(
+                    ["bytes", "bytes"],
+                    [
+                        sf.agreements.ida.contract.methods
+                            .approveSubscription(
+                                daiXToken,
+                                users[i],
+                                DEFAULT_POOL_INDEX_ID, // INDEX_ID
+                                "0x"
+                            )
+                            .encodeABI(), // callData
+                        "0x" // userData
+                    ]
+                  )
+              ],
+              [
+                201, // create constant flow (10/mo)
+                sf.agreements.cfa.address,
+                web3.eth.abi.encodeParameters(
+                    ["bytes", "bytes"],
+                    [
+                        sf.agreements.cfa.contract.methods
+                            .createFlow(
+                                daiXToken,
+                                users[i],
+                                '1000',
+                                "0x"
+                            )
+                            .encodeABI(), // callData
+                        "0x" // userData
+                    ]
+                )
+              ],
+            ]
+      const tx = await sf.host.batchCall(call);
+      console.log(tx)
     }
+
+    // distribute funds to pool
+    const distributedPool = await user.distributeToPool({ poolId: DEFAULT_POOL_INDEX_ID, amount: 1000 });
+    console.log(distributedPool)
+
   }
 
   return (
