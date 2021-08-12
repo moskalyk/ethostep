@@ -61,7 +61,7 @@ synchrony
 ## questions & investigates
 * every so often a peer connects to another host for a gather based on some weighting calculated at the node, could use this as a [visible video predictor](https://github.com/gfxdisp/FovVideoVDP)
 * storage of ethereum addresses in the browser to map to peerids from fluence, to superfluid streams dividend rights token for Initial distribution agreements participants
-* perfrom benchmarks and live counter of data capture via flow Mb/s to map to auction house bidbot and intern $0.10 tree with [Eden Reforestation Project](https://edenprojects.org/).
+* perfrom benchmarks and live counter of data capture via flow Mb/s to map to auction deals with and converted tree purchases $0.10 with [Eden Reforestation Project](https://edenprojects.org/).
 
 *token for thought: ethereum gas fees be a function of trees planted, more use of 4 hour increment rhythms, more cognition trials, devotion to longer optimism rolled up life cyles, health clock synchrony, tree repair on carbon sequestration, joy exuding activities to powerful sound baths & music orchestration*
 
@@ -70,9 +70,8 @@ synchrony
 * send to aqua script to call
 * send particle to marine vm
 * in marine vm, compute multiple particle sources together 
-*     Re: data & 
-*     external frequency source as hz calculation
-*     add in layer of point pixel mapping as an accuracy to shape
+* send data & external frequency source as hz calculation
+* add in layer of point pixel mapping as an accuracy to shape
 * every time step x windows, perform a shuffle from the kademlia service, 
 * get neighbours and seed random with timestep built-in function
 * before every shuffle, perform a snapshot and deploy NFT on polygon
