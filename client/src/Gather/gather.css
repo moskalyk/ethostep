@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  background: hsl(0, 0%, 95%);
+  /* center the card in the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* specify a brighter background to have the card pop from the off-white background */
+.card {
+  color: hsl(195, 100%, 60%);
+  position: relative;
+  margin: 25px;
+}
+.card svg {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+/* animate the satellites to rotate around the planet */
+svg #satellites {
+  animation: orbit 10s linear infinite;
+  margin: auto;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/* animate the shapes describing the brows, eyes and mouth to scale continuously to a smaller size */
+svg #rectangle,
+svg #ellipse {
+  animation: scale 2s ease-in-out infinite alternate;
+}
+@keyframes scale {
+  50% {
+    transform: scaleY(0.85);
+  }
+}
+
+/* position the progress element at the bottom of the card, stretching to cover its width */
+.card progress {
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 0.5rem;
+  border: none;
+  background: hsl(0, 0%, 100%);
+  bottom: -20px;
+  margin: auto;
+}
+/* style the progress bar with the same background color used for the svg */
+.card progress::-webkit-progress-bar {
+  background: none;
+  border: none;
+}
+.card progress::-webkit-progress-value {
+  background: hsl(195, 20%, 60%);
+}
+.card progress::-moz-progress-bar {
+  background: hsl(195, 20%, 60%);
+}
+.card progress::-ms-fill {
+  background: hsl(195, 20%, 60%);
+}

@@ -2,9 +2,9 @@
   margin: auto auto;
   margin-top: 2%;
   border: 2px dashed black;
-  width: 30%;
+  width: 31%;
   font-family: 'Major Mono Display', monospace !important;
-
+  padding-bottom: 20px;
 }
 
 button {

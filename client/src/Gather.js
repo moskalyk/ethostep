@@ -7,8 +7,17 @@ import '@audius/stems/dist/avenir.css'
 import Graph from "react-graph-vis";
 import abi from './abis/Dividend_Rights_Token.js'
 import Counter from './Counter/Counter.js'
+import './Gather/gather.css'
 
 import Web3 from 'web3';
+
+import chakra1 from'./image/1.png';
+import chakra2 from'./image/2.png';
+import chakra3 from'./image/3.png';
+import chakra4 from'./image/4.png';
+import chakra5 from'./image/5.png';
+import chakra6 from'./image/6.png';
+import chakra7 from'./image/7.png';
 
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
@@ -19,14 +28,56 @@ const { web3tx } = require("@decentral.ee/web3-helpers");
 let sf;
 let web3;
 const daiXToken = '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00'
+let progress;
+let rotate;
+let rotateOpposite;
+let translate;
+let rectangle;
+let ellipse;
+let direction;
+
+
+const mudrasSet = {
+  0: chakra1,
+  1: chakra2,
+  2: chakra3,
+  3: chakra4,
+  4: chakra5,
+  5: chakra6,
+  6: chakra7,
+}
+
 function Gather() {
   const [accountWallet, setAccountWallet] = useState('')
   const [user, setUser] = useState({})
   const [isLoadAccount, setIsLoadAccount] = useState(false)
+  const [torque, setTorque] = useState(0)
 
   useEffect(async () => {
     if(!isLoadAccount){
       setAccount()
+
+
+        // target the progress bar and the svg elements animated alongside it
+      progress = document.querySelector('progress');
+
+      rotate = document.querySelector('svg #rotate');
+      rotateOpposite = document.querySelector('svg #rotate-opposite');
+      translate = document.querySelector('svg #translate');
+      rectangle = document.querySelector('svg #rectangle');
+      ellipse = document.querySelector('svg #ellipse');
+
+      // describe a variable to have the animation rock forwards and backwars
+      direction = 1;
+
+      // set initial values for the group elements describing the face, to have the graphic look leftwards
+      translate.setAttribute('transform', 'translate(0 10)');
+      rotate.setAttribute('transform', 'rotate(50)');
+      rotateOpposite.setAttribute('transform', 'rotate(-50)');
+
+      updateProgress()
+
+
       setIsLoadAccount(true)
     }
   })
@@ -193,17 +244,89 @@ function Gather() {
     console.log(distributedPool)
 
   }
+    
+function switchTorque() {
+  console.log('switching')
+  // get random number
+  // set torque
+  const random = Math.round(6*Math.random())
+
+  setTorque(random)
+  console.log(random)
+}
+
+// function used to update the progress bar and the graphic alongside it
+function updateProgress() {
+  // update the value of the progress bar
+  progress.value += direction * 0.4;
+  // switch the direction of the animation when reaching the boundaries of the [0-100] range
+  if(progress.value >= 100 || progress.value <= 0) {
+    direction *= -1;
+    switchTorque()
+  }
+  // animate the planet to rotate the groups in the [50, -50] range
+  rotate.setAttribute('transform', `rotate(${50 - progress.value})`);
+  rotateOpposite.setAttribute('transform', `rotate(${-50 + progress.value})`);
+
+  requestAnimationFrame(updateProgress);
+}
+
+const renderSwitch = (ran) => {
+  return <img src={mudrasSet[ran]} />
+}
 
   return (
     <div className="App">
 
       <div className="title">
-        <h1 className="title">gather</h1>
+        <h1 className="title">Gather</h1>
+        </div>
+        <div>
+            {renderSwitch(torque)}
         </div>
         {/*<Button text='Hello World!' />*/}
-      <button className="button-begin" onClick={gather}>gather</button>
+      <button className="button-begin" onClick={gather}>Gather</button>
       <button className="button-begin" onClick={start}>start</button>
       <button className="button-begin" onClick={end}>stop</button>
+      <div class="card">
+  <svg viewBox="0 0 100 100" width="100" height="100" style={{margin: 'auto'}}>
+    <defs>
+      <circle id="circle" cx="0" cy="0" r="1"></circle>
+    </defs>
+    <g transform="translate(50 50)">
+      <use href="#circle" transform="scale(45)" fill="none" stroke="currentColor" stroke-width="0.02"></use>
+
+      <g id="satellites">
+        <g transform="rotate(180)">
+          <use href="#circle" transform="translate(45 0) scale(5)" fill="currentColor" stroke="none"></use>
+        </g>
+        <g>
+          <use href="#circle" transform="translate(45 0) scale(5)" fill="currentColor" stroke="none"></use>
+        </g>
+      </g>
+
+      <g>
+        <use href="#circle" transform="scale(35)" fill="currentColor" stroke="none">
+          
+        </use>
+        <g opacity="0.3" fill="hsl(0, 0% ,0%)">
+          <g id="rotate" transform="rotate(0)"> 
+            <g id="translate" transform="translate(0 0)">
+              <g id="rotate-opposite" transform="rotate(0)">
+                <g transform="translate(-9 -14)">
+                  
+                </g>
+                {/*Here */}
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+
+  <progress min="0" max="100" value="0"></progress>
+</div>
       <Counter/>
   	</div>
   );

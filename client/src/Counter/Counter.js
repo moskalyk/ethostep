@@ -33,8 +33,8 @@ function Counter(props){
         <span><h2>&nbsp;&nbsp;:&nbsp;&nbsp;</h2></span>
         <span><h2 style={{fontFamily: '"Major Mono Display", monospace !important'}}>{count} 🌱</h2></span>
        </div>
-      <button id="inc" onClick={increment}>+1</button>
-      <button id="reset" onClick={reset}>Reset</button>
+      {/*<button id="inc" onClick={increment}>+1</button>*/}
+      {/*<button id="reset" onClick={reset}>Reset</button>*/}
      </div>
    );
 } 
