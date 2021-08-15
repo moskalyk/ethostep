@@ -1,5 +1,5 @@
 
-import {useEffect, useState} from 'react';
+import {useEffect, useState, Component} from 'react';
 import { Button } from '@audius/stems'
 import '@audius/stems/dist/stems.css'
 import '@audius/stems/dist/avenir.css'
@@ -19,6 +19,9 @@ import chakra4 from'./image/4.png';
 import chakra5 from'./image/5.png';
 import chakra6 from'./image/6.png';
 import chakra7 from'./image/7.png';
+
+// blueberry device
+import BlueberryDevice from './bby_connect.js';
 
 // import fluence
 import { createClient, FluenceClient } from "@fluencelabs/fluence";
@@ -57,6 +60,32 @@ const mudrasSet = {
   6: chakra7,
 }
 
+class ConnectBlueberry extends Component {
+    render() {
+        return (
+            <button className="main-button" onClick={this.props.cb}>Connect Blueberry</button>
+        )
+    }
+}
+
+
+class TryConnectBlueberry extends Component {
+    render() {
+        return (
+            <button className="main-button" onClick={this.props.cb}>Cancel Connecting...</button>
+        )
+    }
+}
+
+
+class DisconnectBlueberry extends Component {
+    render() {
+        return (
+            <button className="main-button" onClick={this.props.cb}>Disconnect Blueberry</button>
+        )
+    }
+}
+
 function Gather() {
   // wallet
   const [accountWallet, setAccountWallet] = useState('')
@@ -65,6 +94,11 @@ function Gather() {
 
   // ethostep
   const [torque, setTorque] = useState(0)
+
+  // blueberry states
+    const [session, setSession] = useState<boolean>(false);
+  const [connectState, setConnectState] = useState<number>(0);
+  const [blueberry, setBlueberry] = useState<any>({});
 
   // fluence
   const [client, setClient] = useState(null);
@@ -86,7 +120,7 @@ function Gather() {
 
       // fluence client
       try{
-        const client = await createClient(testNet[1].multiaddr, testNet[1].peerId);
+        const client = await createClient(testNet[0].multiaddr, testNet[0].peerId);
       setClient(client);
       }catch(e){
         console.log(e)
@@ -155,6 +189,28 @@ function Gather() {
   };
 
 
+  const connect = async () => {
+    let blueberry = new BlueberryDevice(connect_cb.bind(this), disconnect_cb.bind(this), try_connect_cb.bind(this))
+    setBlueberry(blueberry)
+  }
+
+      const connect_cb = () => {
+        setSession(true)
+        console.log("CONNECTED");
+        setConnectState(2)
+        //this.state.connect_state = true;
+    }
+
+    const disconnect_cb = () => {
+        console.log("DISCONNECTED");
+        setConnectState(0)
+    }
+
+    const try_connect_cb = () => {
+        console.log("TRYING TO CONNECT");
+        setConnectState(1)
+    }
+
   const setAccount = async () => {
     console.log('howdy')
 
@@ -216,21 +272,21 @@ function Gather() {
     });
   }
 
-  const connect = async () => {
+  // const connect = async () => {
 
-  }
+  // }
 
   const gather = async () => {
     console.log('start')
 
     setInterval(async () => {
-      const res1 = await mean(client, [1,2,3,4,5,6], peerIdInput, 'f0fc7220-dd4d-413f-b8a8-51e368cbda34');
+      const res1 = await mean(client, [1,2,3,4,5,6], testNet[0].multiaddr, '8dc731cb-b78a-4218-b555-897be7588f9e');
       setMeanValue(res1.result);
       console.log(res1)
     },1000)
 
     // starting pool configs
-    const DEFAULT_POOL_INDEX_ID = 22;
+    const DEFAULT_POOL_INDEX_ID = 25;
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
 
     // create pool
@@ -277,8 +333,8 @@ function Gather() {
     }
 
     // distribute funds to pool
-    const distributedPool = await sf.distribute({ poolId: DEFAULT_POOL_INDEX_ID, amount: toWad(100).toString() });
-    console.log(distributedPool)
+    // const distributedPool = await sf.distribute({ poolId: DEFAULT_POOL_INDEX_ID, amount: toWad(100).toString() });
+    // console.log(distributedPool)
 
   }
     // let call = [
