@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import App from './App';
-import Gather from './Gather';
+import Gather from './Gather.tsx';
 
 import reportWebVitals from './reportWebVitals';
 import {

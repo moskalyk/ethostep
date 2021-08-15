@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@audius/stems": "^0.3.14",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@decentral.ee/web3-helpers": "^0.5.3",
     "@ethersproject/contracts": "^5.4.1",
     "@ethersproject/providers": "^5.4.3",
@@ -50,7 +52,8 @@
   },
   "babel": {
     "presets": [
-      "react"
+      "react",
+      "@babel/preset-env"
     ],
     "plugins": [
       "transform-es2015-modules-commonjs"

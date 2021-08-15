@@ -6,15 +6,16 @@
  * Aqua version: 0.1.13-202
  *
  */
+import { FluenceClient, PeerIdB58 } from '@fluencelabs/fluence';
 import { RequestFlowBuilder } from '@fluencelabs/fluence/dist/api.unstable';
+import { RequestFlow } from '@fluencelabs/fluence/dist/internal/RequestFlow';
 
 
 
-export async function mean(client, data, node, service_id, config) {
-    let request;
-    config = config || {};
-    const promise = new Promise((resolve, reject) => {
-        var r = new RequestFlowBuilder()
+export async function mean(client: FluenceClient, data: number[], node: string, service_id: string, config?: {ttl?: number}): Promise<{error_msg:string;result:number;success:boolean}> {
+    let request: RequestFlow;
+    const promise = new Promise<{error_msg:string;result:number;success:boolean}>((resolve, reject) => {
+        const r = new RequestFlowBuilder()
             .disableInjections()
             .withRawScript(
                 `
@@ -60,15 +61,14 @@ export async function mean(client, data, node, service_id, config) {
             )
             .configHandler((h) => {
                 h.on('getDataSrv', '-relay-', () => {
-                    return client.relayPeerId;
+                    return client.relayPeerId!;
                 });
                 h.on('getDataSrv', 'data', () => {return data;});
 h.on('getDataSrv', 'node', () => {return node;});
 h.on('getDataSrv', 'service_id', () => {return service_id;});
                 h.onEvent('callbackSrv', 'response', (args) => {
-   let opt = args;
-
- return resolve(opt);
+    const [res] = args;
+  resolve(res);
 });
 
                 h.onEvent('errorHandlingSrv', 'error', (args) => {
@@ -81,12 +81,12 @@ h.on('getDataSrv', 'service_id', () => {return service_id;});
             .handleTimeout(() => {
                 reject('Request timed out for mean');
             })
-        if(config.ttl) {
+        if(config && config.ttl) {
             r.withTTL(config.ttl)
         }
         request = r.build();
     });
-    await client.initiateFlow(request);
+    await client.initiateFlow(request!);
     return promise;
 }
       

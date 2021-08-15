@@ -26,12 +26,12 @@ import { krasnodar } from "@fluencelabs/fluence-network-environment";
 import { testNet } from "@fluencelabs/fluence-network-environment";
 
 // import { sayHello } from "./_aqua/getting-started";
-import { mean } from "./_aqua/getting_started_2.js";
+import { mean } from "./_aqua/getting_started_2.ts";
 const relayNodes = [krasnodar[0], krasnodar[1], krasnodar[2]];
 
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
-const { toBN, web3tx, toWad } = require("@decentral.ee/web3-helpers");
+// const { toBN, web3tx, toWad } = require("@decentral.ee/web3-helpers");
 
 // import "./network.css";
 
@@ -230,7 +230,7 @@ function Gather() {
     },1000)
 
     // starting pool configs
-    const DEFAULT_POOL_INDEX_ID = 21;
+    const DEFAULT_POOL_INDEX_ID = 22;
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
 
     // create pool
