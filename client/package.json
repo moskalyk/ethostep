@@ -7,6 +7,8 @@
     "@decentral.ee/web3-helpers": "^0.5.3",
     "@ethersproject/contracts": "^5.4.1",
     "@ethersproject/providers": "^5.4.3",
+    "@fluencelabs/fluence": "^0.9.54",
+    "@fluencelabs/fluence-network-environment": "^1.0.10",
     "@openzeppelin/test-helpers": "^0.5.12",
     "@superfluid-finance/js-sdk": "^0.5.2",
     "@testing-library/jest-dom": "^5.11.4",
@@ -19,6 +21,7 @@
     "react-graph-vis": "^1.0.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "typescript": "^4.3.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

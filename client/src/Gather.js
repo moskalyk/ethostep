@@ -11,6 +11,7 @@ import './Gather/gather.css'
 
 import Web3 from 'web3';
 
+// import images
 import chakra1 from'./image/1.png';
 import chakra2 from'./image/2.png';
 import chakra3 from'./image/3.png';
@@ -19,9 +20,18 @@ import chakra5 from'./image/5.png';
 import chakra6 from'./image/6.png';
 import chakra7 from'./image/7.png';
 
+// import fluence
+import { createClient, FluenceClient } from "@fluencelabs/fluence";
+import { krasnodar } from "@fluencelabs/fluence-network-environment";
+import { testNet } from "@fluencelabs/fluence-network-environment";
+
+// import { sayHello } from "./_aqua/getting-started";
+import { mean } from "./_aqua/getting_started_2.js";
+const relayNodes = [krasnodar[0], krasnodar[1], krasnodar[2]];
+
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
-const { web3tx } = require("@decentral.ee/web3-helpers");
+const { toBN, web3tx, toWad } = require("@decentral.ee/web3-helpers");
 
 // import "./network.css";
 
@@ -48,14 +58,47 @@ const mudrasSet = {
 }
 
 function Gather() {
+  // wallet
   const [accountWallet, setAccountWallet] = useState('')
   const [user, setUser] = useState({})
   const [isLoadAccount, setIsLoadAccount] = useState(false)
+
+  // ethostep
   const [torque, setTorque] = useState(0)
 
+  // fluence
+  const [client, setClient] = useState(null);
+  const [helloMessage, setHelloMessage] = useState(null);
+  const [meanValue, setMeanValue] = useState(0);
+
+  // const [relayPeerIdInput, setRelayPeerIdInput] = useState(krasnodar[0].multiaddr);
+  const [peerIdInput, setPeerIdInput] = useState("12D3KooWQkkUmfJFxnxzzsdD9fsYGRnvC717WxfSq1sFq9ehzdiy");
+
   useEffect(async () => {
+
     if(!isLoadAccount){
+
+      console.log('relayPeerIdInput')
+      console.log(testNet[1].multiaddr)
+      console.log(testNet[1].peerId)
+      console.log(createClient)
+
+
+      // fluence client
+      try{
+        const client = await createClient(testNet[1].multiaddr, testNet[1].peerId);
+      setClient(client);
+      }catch(e){
+        console.log(e)
+      }
       setAccount()
+
+
+      // .then((client) => {
+      //   console.log(client)
+      //   setClient(client);
+      // })
+      // .catch((err) => console.log("Client initialization failed", err));
 
 
         // target the progress bar and the svg elements animated alongside it
@@ -165,7 +208,7 @@ function Gather() {
     });
   }
 
-  const start = () => {
+  const grow = () => {
     console.log('start')
      user.flow({
       recipient: "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
@@ -173,11 +216,21 @@ function Gather() {
     });
   }
 
+  const connect = async () => {
+
+  }
+
   const gather = async () => {
     console.log('start')
 
+    setInterval(async () => {
+      const res1 = await mean(client, [1,2,3,4,5,6], peerIdInput, 'f0fc7220-dd4d-413f-b8a8-51e368cbda34');
+      setMeanValue(res1.result);
+      console.log(res1)
+    },1000)
+
     // starting pool configs
-    const DEFAULT_POOL_INDEX_ID = 15;
+    const DEFAULT_POOL_INDEX_ID = 21;
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
 
     // create pool
@@ -191,68 +244,91 @@ function Gather() {
     const shareSplit = 1/usersLength * 100
 
     // split tokens to users, approve subscriptions
+    console.log('shareSplit')
+    console.log(shareSplit)
+    console.log(user)
+    console.log(accountWallet)
+    const { exist } = await sf.ida.getIndex({
+        superToken: daiXToken,
+        publisher: accountWallet,
+        indexId: DEFAULT_POOL_INDEX_ID,
+    });
+
+    console.log('exist')
+    console.log(exist)
+
     for (var i = 0; i> usersLength; i++){
-      let shares = await user.giveShares({ poolId: 1, recipient: users[i], shares: shareSplit });
+      console.log(users[i])
+      let shares = await user.giveShares({ poolId: DEFAULT_POOL_INDEX_ID, recipient: users[i], shares: shareSplit });
+      console.log('shares')
       console.log(shares)
 
 
 
-    let call = [
-              [
-                  201, // approve the ticket fee
-                  sf.agreements.ida.address,
-                  web3.eth.abi.encodeParameters(
-                    ["bytes", "bytes"],
-                    [
-                        sf.agreements.ida.contract.methods
-                            .approveSubscription(
-                                daiXToken,
-                                users[i],
-                                DEFAULT_POOL_INDEX_ID, // INDEX_ID
-                                "0x"
-                            )
-                            .encodeABI(), // callData
-                        "0x" // userData
-                    ]
-                  )
-              ],
-              [
-                201, // create constant flow (10/mo)
-                sf.agreements.cfa.address,
-                web3.eth.abi.encodeParameters(
-                    ["bytes", "bytes"],
-                    [
-                        sf.agreements.cfa.contract.methods
-                            .createFlow(
-                                daiXToken,
-                                users[i],
-                                '1000',
-                                "0x"
-                            )
-                            .encodeABI(), // callData
-                        "0x" // userData
-                    ]
-                )
-              ],
-            ]
-      const tx = await sf.host.batchCall(call);
-      console.log(tx)
+
+      // const tx = await sf.ida.approveSubscription({
+      //           superToken: daiXToken,
+      //           publisher: accountWallet,
+      //           indexId: DEFAULT_POOL_INDEX_ID,
+      //           subscriber: users[i],
+      //       });
+
+      // console.log(tx)
     }
 
     // distribute funds to pool
-    const distributedPool = await user.distributeToPool({ poolId: DEFAULT_POOL_INDEX_ID, amount: 1000 });
+    const distributedPool = await sf.distribute({ poolId: DEFAULT_POOL_INDEX_ID, amount: toWad(100).toString() });
     console.log(distributedPool)
 
   }
+    // let call = [
+    //           [
+    //               201, // approve the ticket fee
+    //               sf.agreements.ida.address,
+    //               web3.eth.abi.encodeParameters(
+    //                 ["bytes", "bytes"],
+    //                 [
+    //                     sf.agreements.ida.contract.methods
+    //                         .approveSubscription(
+    //                             daiXToken,
+    //                             accountWallet,
+    //                             DEFAULT_POOL_INDEX_ID, // INDEX_ID
+    //                             users[i]
+    //                         )
+    //                         .encodeABI(), // callData
+    //                     "0x" // userData
+    //                 ]
+    //               )
+    //           ],
+    //           [
+    //             201, // create constant flow (10/mo)
+    //             sf.agreements.cfa.address,
+    //             web3.eth.abi.encodeParameters(
+    //                 ["bytes", "bytes"],
+    //                 [
+    //                     sf.agreements.cfa.contract.methods
+    //                         .createFlow(
+    //                             daiXToken,
+    //                             users[i],
+    //                             '1000',
+    //                             "0x"
+    //                         )
+    //                         .encodeABI(), // callData
+    //                     "0x" // userData
+    //                 ]
+    //             )
+    //           ],
+    //         ]
+    //   const tx = await sf.host.batchCall(call);
     
 function switchTorque() {
-  console.log('switching')
+  // console.log('switching')
   // get random number
   // set torque
   const random = Math.round(6*Math.random())
 
   setTorque(random)
-  console.log(random)
+  // console.log(random)
 }
 
 // function used to update the progress bar and the graphic alongside it
@@ -285,16 +361,17 @@ const renderSwitch = (ran) => {
             {renderSwitch(torque)}
         </div>
         {/*<Button text='Hello World!' />*/}
+      <button className="button-begin" onClick={connect}>connect</button>
       <button className="button-begin" onClick={gather}>Gather</button>
-      <button className="button-begin" onClick={start}>start</button>
-      <button className="button-begin" onClick={end}>stop</button>
-      <div class="card">
+      <button className="button-begin" onClick={grow}>grow</button>
+      {/*<button className="button-begin" onClick={end}>stop</button>*/}
+      <div className="card">
   <svg viewBox="0 0 100 100" width="100" height="100" style={{margin: 'auto'}}>
     <defs>
       <circle id="circle" cx="0" cy="0" r="1"></circle>
     </defs>
     <g transform="translate(50 50)">
-      <use href="#circle" transform="scale(45)" fill="none" stroke="currentColor" stroke-width="0.02"></use>
+      <use href="#circle" transform="scale(45)" fill="none" stroke="currentColor" strokeWidth="0.02"></use>
 
       <g id="satellites">
         <g transform="rotate(180)">

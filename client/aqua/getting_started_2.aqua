@@ -1,0 +1,18 @@
+data HelloWorld:
+  msg: string
+  reply: string
+
+data Result:
+  result: u32
+  success: bool
+  error_msg: string
+
+service HelloWorld:
+  hello(from: string) -> HelloWorld
+  window(data: []u32) -> Result
+
+func mean(data: []u32, node: string, service_id:string) -> Result:
+    on node:
+        HelloWorld service_id
+        res <- HelloWorld.window(data)
+    <- res
