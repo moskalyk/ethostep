@@ -26,7 +26,7 @@ import BlueberryDevice from './bby_connect.js';
 // import fluence
 import { createClient, FluenceClient } from "@fluencelabs/fluence";
 import { krasnodar } from "@fluencelabs/fluence-network-environment";
-import { testNet } from "@fluencelabs/fluence-network-environment";
+// import { testNet } from "@fluencelabs/fluence-network-environment";
 
 // import { sayHello } from "./_aqua/getting-started";
 import { mean } from "./_aqua/getting_started_2.ts";
@@ -113,14 +113,14 @@ function Gather() {
     if(!isLoadAccount){
 
       console.log('relayPeerIdInput')
-      console.log(testNet[1].multiaddr)
-      console.log(testNet[1].peerId)
+      console.log(krasnodar[0].multiaddr)
+      console.log(krasnodar[0].peerId)
       console.log(createClient)
 
 
       // fluence client
       try{
-        const client = await createClient(testNet[0].multiaddr, testNet[0].peerId);
+        const client = await createClient(krasnodar[0].multiaddr, krasnodar[0].peerId);
       setClient(client);
       }catch(e){
         console.log(e)
@@ -280,13 +280,13 @@ function Gather() {
     console.log('start')
 
     setInterval(async () => {
-      const res1 = await mean(client, [1,2,3,4,5,6], testNet[0].multiaddr, '8dc731cb-b78a-4218-b555-897be7588f9e');
+      const res1 = await mean(client, [1,2,3,4,5,6], "12D3KooWSD5PToNiLQwKDXsu8JSysCwUt8BVUJEqCHcDe7P5h45e", '81043704-214f-412c-981d-04ca884b027e');
       setMeanValue(res1.result);
       console.log(res1)
     },1000)
 
     // starting pool configs
-    const DEFAULT_POOL_INDEX_ID = 25;
+    const DEFAULT_POOL_INDEX_ID = 28;
     const users = ['0x70997970c51812dc3a010c7d01b50e0d17dc79c8', "0xeCcaB154b9c8DB8F93DB67608ffe6A5d2001eCdc"]
 
     // create pool
