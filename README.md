@@ -30,6 +30,7 @@ Frequencies can have NFT’s minted as time shots, like onto L2 like polygon. Gr
 Specific use cases I might be looking at are: 
 * At Home :: gestures or exercises, possibly even tie in elderly community as sometimes physical activity can be difficult, so movement of hands in hastas or other symbolic gesture execution might yield productive and connected hearts and minds
 * Local park festivals or meetups :: With heads up displays, Augmented reality or Light Emitting Diodes with color coordination via blueberry light can be mapped, with the same procedure of cycling signs, even conducting in unison around specific culturally significant public trees, whereby future uses become embedded in the data produce, like coptic or feinance etching in artist peices seen through in anthropological history in other items
+* Elderly Articulation : gestures or exercises, for elderly or parapalygic as sometimes physical activity can be difficult, so movement of hands in hastas or other symbolic gesture execution might yield productive and connected hearts and minds
 
 Placing new significant terms on the word **_Ritual Reality_**, where Phygital (Digital + Physical) NFTs become incorporated into tracked objects or movements of sacred.
 
